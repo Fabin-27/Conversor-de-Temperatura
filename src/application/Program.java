@@ -16,13 +16,13 @@ public class Program {
 
 		int x;
 		int y;
-		double temperature;
+		double rate;
 
 		System.out.println("Welcome");
 		System.out.println();
 		System.out.println("Enter the temperature value:");
 
-		temperature = sc.nextDouble();
+		rate = sc.nextDouble();
 
 		System.out.println("What scale is the temperature on?");
 		System.out.println("(1) Celsius");
@@ -34,7 +34,7 @@ public class Program {
 		switch (x) {
 
 		case 1:
-
+ 
 			System.out.println("What scale do you want to convert to?");
 			System.out.println("(1) Fahrenheit");
 			System.out.println("(2) Kelvin");
@@ -44,15 +44,15 @@ public class Program {
 			switch (y) {
 
 			case 1:
-				ToFahrenheit tf = new ToFahrenheit(temperature, temperature);
-				System.out.println(temperature + "°C" + " = " + String.format("%.0f", tf.CelsiusToFahrenheit()) + "°F");
+				ToFahrenheit tf = new ToFahrenheit(rate);
+				System.out.println(rate + "°C" + " = " + String.format("%.0f", tf.CelsiusToFahrenheit(rate)) + "°F");
 
-				break; 
+				break;
 
 			case 2:
 
-				ToKelvin tk = new ToKelvin(temperature, temperature);
-				System.out.println(temperature + "°C" + " = " + String.format("%.0f", tk.CelsiusToKelvin()) + "°K");
+				ToKelvin tk = new ToKelvin(rate);
+				System.out.println(rate + "°C" + " = " + String.format("%.0f", tk.CelsiusToKelvin(rate)) + "°K");
 
 				break;
 			}
@@ -70,21 +70,21 @@ public class Program {
 
 			case 1:
 
-				ToCelsius tc = new ToCelsius(temperature, temperature);
-				System.out.println(temperature + "°F" + " = " + String.format("%.0f", tc.FahrenheitToCelsius()) + "°C");
+				ToCelsius tc = new ToCelsius(rate);
+				System.out.println(rate + "°F" + " = " + String.format("%.0f", tc.FahrenheitToCelsius(rate)) + "°C");
 
 				break;
 
 			case 2:
-				
-				ToKelvin tk = new ToKelvin(temperature, temperature);
-				System.out.println(temperature + "°F" + " = " + String.format("%.0f", tk.FahrenheitToKelvin()) + "°K");
+
+				ToKelvin tk = new ToKelvin(rate);
+				System.out.println(rate + "°F" + " = " + String.format("%.0f", tk.FahrenheitToKelvin(rate)) + "°K");
 
 				break;
 			}
-			
+
 			break;
-			
+
 		case 3:
 
 			System.out.println("What scale do you want to convert to?");
@@ -97,19 +97,19 @@ public class Program {
 
 			case 1:
 
-				ToCelsius tc = new ToCelsius(temperature, temperature);
-				System.out.println(temperature + "°K" + " = " + String.format("%.0f", tc.KelvinToCelsius()) + "°C");
+				ToCelsius tc = new ToCelsius(rate);
+				System.out.println(rate + "°K" + " = " + String.format("%.0f", tc.KelvinToCelsius(rate)) + "°C");
 
 				break;
 
 			case 2:
-				
-				ToFahrenheit tf = new ToFahrenheit(temperature, temperature);
-				System.out.println(temperature + "°K" + " = " + String.format("%.0f", tf.KelvinToFahrenheit()) + "°F");
+
+				ToFahrenheit tf = new ToFahrenheit(rate);
+				System.out.println(rate + "°K" + " = " + String.format("%.0f", tf.KelvinToFahrenheit(rate)) + "°F");
 
 				break;
 			}
-			
+
 			break;
 
 		}

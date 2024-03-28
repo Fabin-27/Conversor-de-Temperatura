@@ -1,51 +1,17 @@
 package entities;
 
-public class ToCelsius {
+public class ToCelsius extends Temperature {
 
-	private Double Kelvin;
-	private Double Fahrenheit;
-	private Double Celsius;
-
-	public ToCelsius() {
-
+	public ToCelsius(double rate) {
+		super(rate);
 	}
 
-	public ToCelsius(Double kelvin, Double fahrenheit) {
-
-		Kelvin = kelvin;
-		Fahrenheit = fahrenheit;
+	public Double KelvinToCelsius(double celsius) { 
+		return celsius = getRate() - 273.15;
 	}
 
-	public Double getKelvin() {
-		return Kelvin;
-	}
-
-	public void setKelvin(Double kelvin) {
-		Kelvin = kelvin;
-	}
-
-	public Double getFahrenheit() {
-		return Fahrenheit;
-	}
-
-	public void setFahrenheit(Double fahrenheit) {
-		Fahrenheit = fahrenheit;
-	}
-
-	public Double getCelsius() {
-		return Celsius;
-	}
-
-	public void setCelsius(Double celsius) {
-		Celsius = celsius;
-	}
-
-	public Double KelvinToCelsius() {
-		return Celsius = Kelvin - 273.15;
-	}
-
-	public Double FahrenheitToCelsius() { // testado
-		return Celsius = ((Fahrenheit - 32) * 5 / 9);
+	public Double FahrenheitToCelsius(double celsius) { 
+		return celsius = ((getRate() - 32) * 5 / 9);
 	}
 
 }
